@@ -1,5 +1,5 @@
 
-# SQLite-Interface-Maker
+# SQLite C# Interface Maker
 
 This is a simple program used to make a simple C# interface of a provided `.db` file using `Dapper.Net` and `System.Data.SQLite`
 
@@ -24,8 +24,13 @@ This is a simple program used to make a simple C# interface of a provided `.db` 
 - You can cycle through these items using a foreach loop: "`foreach (var variable in list) { suite; }`" (Example: `foreach (var x in items) { Console.WriteLine(x.FirstName); }`).
 - You can also convert the list to an array if it better suites you needs.
 ### Remove rows from a table
+- Using `{Namespace}.{Table Name}.Access.RemoveById();` You can remove an item from a table by using its integer ID. (Example: `DatabaseInterface.User.Access.RemoveById(3);`).
 
 ### Replace rows in a table
+- Create the model you wish to replace something with using the same instructions found above in "**Add a row to a table**".
+- Assign the id field of the model to the id of the row you want to replace using: "`{model variable name}.id = {id of row you want to replace}`" (Example: `model.id = 23;`).
+- Pass the new model into the "`{Namespace}.{Table Name}.Access.ReplaceById({ model variable} );`"  function (Example: `DatabaseInterface.User.Access.ReplaceById(model);`).
+
 
 ## Usage Instructions
 
