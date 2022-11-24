@@ -2,8 +2,9 @@
 # SQLite C# Interface Maker
 
 This is a simple program used to make a simple C# interface of a provided `.db` file using `Dapper.Net` and `System.Data.SQLite`
+Note: The code for this project is extremely hard to read, and might be the most "built for one purpose, and one purpose only" kind of code ever written. But if you wish to help with adding to this project, it would be greatly appreciated. 
 
-## Setup Instructions
+# Setup Instructions
 - Make sure your data base has one field named "`id`"(all lowercase) that is unique, an integer, and auto incrementing (You set these when you create your table)
 - Install `Dapper.NET` and `System.Data.SQLite` Nuget packages into the project were your interface class will be located.
 - Download the `InterfaceMaker.cs` file.
@@ -12,7 +13,7 @@ This is a simple program used to make a simple C# interface of a provided `.db` 
 - Replace "`{RELATIVE PATH OF DATABASE EXAMPLE: ./database.db}`" with the relative path of your database (Example(if your file was located at `C:\ParentDir` and your database is located at `C:\ParentDir\DatabaseLocation`): `./DatabaseLocation/DatabaseName.db`).
 - Replace "`{NAMESPACE OF DATABASE}`" with the namespace you want for your Interface class.
 
-## Usage Instructions
+# Usage Instructions
 ### Add a row to a table
 - Create your model by creating a class: "`var model = new {Namespace}.{Table Name}.Model();`" (Example: `var model = new DatabaseInterface.User.Model();`)
 - Assign the fields a value individually using "`{the variable you just made}.{Field Name} = {Value};` " (Example: `model.FirstName = "Jack";` or, for an integer value `model.Age = 32;`)
@@ -32,9 +33,7 @@ This is a simple program used to make a simple C# interface of a provided `.db` 
 - Pass the new model into the "`{Namespace}.{Table Name}.Access.ReplaceById({ model variable} );`"  function (Example: `DatabaseInterface.User.Access.ReplaceById(model);`).
 
 
-## Usage Instructions
-
-## Functions created per table in the database
+# Functions created per table in the database
 - `Access.GetItems()` -- Returns a complete list of every model in a table
 - `Access.Add(   {TableName}.Model model   )` -- Adds a model to a table
 - `Access.RemoveById(   int ItemId   )` -- Removes item from specified table based on its id
