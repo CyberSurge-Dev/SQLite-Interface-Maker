@@ -12,6 +12,7 @@ Note: The code for this project is extremely hard to read, and might be the most
 - Replace "`{COMPLETE PATH OF DESTINATION FOLDER}`" located on the top variable `Folder` with the complete file path of your destination folder. (Example :  `C:\Temp\DestinationFolder`).
 - Replace "`{RELATIVE PATH OF DATABASE EXAMPLE: ./database.db}`" with the relative path of your database (Example(if your file was located at `C:\ParentDir` and your database is located at `C:\ParentDir\DatabaseLocation`): `./DatabaseLocation/DatabaseName.db`).
 - Replace "`{NAMESPACE OF DATABASE}`" with the namespace you want for your Interface class.
+- Run the file
 
 # Usage Instructions
 ### Add a row to a table
