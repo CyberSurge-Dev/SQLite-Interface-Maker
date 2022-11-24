@@ -5,7 +5,7 @@ This is a simple program used to make a simple C# interface of a provided `.db` 
 Note: The code for this project is extremely hard to read, and might be the most "built for one purpose, and one purpose only" kind of code ever written. But if you wish to help with adding to this project, it would be greatly appreciated. 
 
 # Setup Instructions
-- Make sure your data base has one field named "`id`"(all lowercase) that is unique, an integer, and auto incrementing (You set these when you create your table)
+- Make sure your database tables have one field named "`id`"(all lowercase) that is unique, an integer, and auto incrementing (You set these values when you create your table)
 - Install `Dapper.NET` and `System.Data.SQLite` Nuget packages into the project were your interface class will be located.
 - Download the `InterfaceMaker.cs` file.
 - Open `InterfaceMaker.cs` file and locate the 3 main variables that need to be changed.
